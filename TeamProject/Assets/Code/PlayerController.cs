@@ -8,11 +8,13 @@ public class NewBehaviourScript : MonoBehaviour
     public float Speed;
     private Vector2 Direction;
     private Rigidbody2D rb;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,6 +22,9 @@ public class NewBehaviourScript : MonoBehaviour
     {
         Direction.x = Input.GetAxisRaw("Horizontal");
         Direction.y = Input.GetAxisRaw("Vertical");
+        animator.SetFloat("Horizontal", Direction.x);
+        animator.SetFloat("Vertical", Direction.y);
+        animator.SetFloat("Speed", Direction.sqrMagnitude);
     }
 
     // Called a fixed number of times per second.
