@@ -9,6 +9,7 @@ public class NewBehaviourScript : MonoBehaviour
     private Vector2 Direction;
     private Rigidbody2D rb;
     public Animator animator;
+    bool isPushing;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,8 @@ public class NewBehaviourScript : MonoBehaviour
     {
         Direction.x = Input.GetAxisRaw("Horizontal");
         Direction.y = Input.GetAxisRaw("Vertical");
+
+        animator.SetBool("IsPushing", isPushing);
         animator.SetFloat("Horizontal", Direction.x);
         animator.SetFloat("Vertical", Direction.y);
         animator.SetFloat("Speed", Direction.sqrMagnitude);
@@ -43,6 +46,26 @@ public class NewBehaviourScript : MonoBehaviour
                 Vector3 pushDirection = new Vector3(hit.moveDirection.x, 0, 0);
                 box.velocity = pushDirection;
             }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        Debug.Log("OnTriggerEnter2D");
+        if (other.CompareTag("Box"))
+        {
+            isPushing = true;
+            animator.SetBool("IsPushing", true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        Debug.Log("OnTriggerExit2D");
+        if (other.CompareTag("Box"))
+        {
+            isPushing = false;
+            animator.SetBool("IsPushing", false);
         }
     }
 }
