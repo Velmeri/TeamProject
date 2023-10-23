@@ -9,6 +9,7 @@ public class Button : MonoBehaviour
     public Sprite PressedButton;
     public Sprite DefaultButton;
     public Sprite OpenDoor;
+    public Sprite CloseDoor;
 
     void Start()
     {
@@ -16,13 +17,13 @@ public class Button : MonoBehaviour
     }
     private void Update()
     {
-        //spriteRenderer.sprite = PressedButton;
+
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
         GameObject.Find("Button").GetComponent<SpriteRenderer>().sprite = PressedButton;
-        //GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite = OpenDoor;
+        GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite = OpenDoor;
     }
     private void OnTriggerStay2D(Collider2D col)
     {
@@ -31,5 +32,6 @@ public class Button : MonoBehaviour
     private void OnTriggerExit2D(Collider2D col)
     {
         GameObject.Find("Button").GetComponent<SpriteRenderer>().sprite = DefaultButton;
+        GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite = CloseDoor;
     }
 }
