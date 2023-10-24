@@ -28,6 +28,6 @@ public class OpenLevel : MonoBehaviour
     }
     public void Level_2()
     {
-        
+        SceneManager.LoadScene(2);
     }
 }
