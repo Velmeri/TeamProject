@@ -16,6 +16,8 @@ public class NewBehaviourScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+
+        Speed = 2;
     }
 
     // Update is called once per frame
@@ -52,6 +54,7 @@ public class NewBehaviourScript : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("OnTriggerEnter2D");
+        
         if (other.CompareTag("Box"))
         {
             isPushing = true;
@@ -62,6 +65,7 @@ public class NewBehaviourScript : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         Debug.Log("OnTriggerExit2D");
+
         if (other.CompareTag("Box"))
         {
             isPushing = false;
