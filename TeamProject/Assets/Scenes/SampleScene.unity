@@ -226,17 +226,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 173612589}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1716607931}
+  m_Father: {fileID: 1426285212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 90, y: -122.40001}
-  m_SizeDelta: {x: 285.16, y: 30}
+  m_AnchoredPosition: {x: 89.999, y: -111}
+  m_SizeDelta: {x: 285.16, y: 34.938}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &173612591
 MonoBehaviour:
@@ -281,7 +281,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 173612592}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1716607932}
+        m_TargetAssemblyTypeName: ResetScript, Assembly-CSharp
+        m_MethodName: Menu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &173612592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1273,17 +1285,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1374132085}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1716607931}
+  m_Father: {fileID: 1426285212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 90, y: -3.1}
-  m_SizeDelta: {x: 285.1581, y: 30}
+  m_AnchoredPosition: {x: 90, y: -0.6308}
+  m_SizeDelta: {x: 285.1581, y: 34.9384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1374132087
 MonoBehaviour:
@@ -1569,7 +1581,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1374132086}
+  - {fileID: 1479779134}
+  - {fileID: 173612590}
   m_Father: {fileID: 1716607931}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1641,17 +1656,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1479779133}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1716607931}
+  m_Father: {fileID: 1426285212}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 90, y: -64.200005}
-  m_SizeDelta: {x: 285.16, y: 30}
+  m_AnchoredPosition: {x: 90.001, y: -57}
+  m_SizeDelta: {x: 285.16, y: 34.9384}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1479779135
 MonoBehaviour:
@@ -1791,6 +1806,7 @@ GameObject:
   - component: {fileID: 1716607930}
   - component: {fileID: 1716607929}
   - component: {fileID: 1716607928}
+  - component: {fileID: 1716607932}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1874,9 +1890,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1426285212}
-  - {fileID: 1374132086}
-  - {fileID: 1479779134}
-  - {fileID: 173612590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1884,6 +1897,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1716607932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1716607927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062fe856b0705da44ac59990d503e6b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 1716607927}
 --- !u!1 &1727662256
 GameObject:
   m_ObjectHideFlags: 0
