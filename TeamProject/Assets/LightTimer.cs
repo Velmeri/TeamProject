@@ -6,7 +6,6 @@ public class LightTimer : MonoBehaviour
 {
     // Start is called before the first frame update
     public SpriteRenderer spriteRenderer;
-    float Alpha = 1f;
     void Start()
     {
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();

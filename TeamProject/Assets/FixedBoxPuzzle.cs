@@ -2,29 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Button : MonoBehaviour
+public class FixedBoxPuzzle : MonoBehaviour
 {
-    public SpriteRenderer TipRenderer;
-    public SpriteRenderer spriteRenderer;
-    public Sprite PressedButton;
-    public Sprite DefaultButton;
-    public Sprite OpenDoor;
-    public Sprite CloseDoor;
-
+    public int BoxCount = 6;
+    public Sprite BoxFalse;
+    public Sprite BoxTrue;
+    // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        
     }
-    private void Update()
+
+    // Update is called once per frame
+    void Update()
     {
-
+        
     }
-
-    private void OnTriggerEnter2D(Collider2D col)
+   /* private void OnTriggerEnter2D(Collider2D col)
     {
         GameObject.Find("Button").GetComponent<SpriteRenderer>().sprite = PressedButton;
         GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite = OpenDoor;
-        TipRenderer.color = new Color(1f, 1f, 1f, 1f);
     }
     private void OnTriggerStay2D(Collider2D col)
     {
@@ -33,7 +30,6 @@ public class Button : MonoBehaviour
     private void OnTriggerExit2D(Collider2D col)
     {
         GameObject.Find("Button").GetComponent<SpriteRenderer>().sprite = DefaultButton;
-        TipRenderer.color = new Color(1f, 1f, 1f, 0f);
         GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite = CloseDoor;
-    }
+    }*/
 }

@@ -7,6 +7,14 @@ TagManager:
   - Box
   - Button
   - Door
+  - Closet
+  - Closet2
+  - FB1
+  - FB2
+  - FB3
+  - FB4
+  - FB5
+  - FB6
   layers:
   - Default
   - TransparentFX
