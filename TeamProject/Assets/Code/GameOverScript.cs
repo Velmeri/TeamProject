@@ -20,7 +20,7 @@ public class GameOverScript : MonoBehaviour
     {
         if (timeRemaining > 0)
         {
-            if (GameObject.Find("Closet").GetComponent<SpriteRenderer>().sprite == ClosedCloset || GameObject.Find("Closet2").GetComponent<SpriteRenderer>().sprite == ClosedCloset)
+            if (GameObject.Find("Closet").GetComponent<SpriteRenderer>().sprite == ClosedCloset || GameObject.Find("Closet3").GetComponent<SpriteRenderer>().sprite == ClosedCloset || GameObject.Find("Closet4").GetComponent<SpriteRenderer>().sprite == ClosedCloset || GameObject.Find("Closet5").GetComponent<SpriteRenderer>().sprite == ClosedCloset)
             {
                 timeRemaining = 30;
                 spriteRenderer.color = new Color(1f, 1f, 1f, 0f);

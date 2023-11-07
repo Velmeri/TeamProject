@@ -15,6 +15,7 @@ TagManager:
   - FB4
   - FB5
   - FB6
+  - GarbageBin
   layers:
   - Default
   - TransparentFX

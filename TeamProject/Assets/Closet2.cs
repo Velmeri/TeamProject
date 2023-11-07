@@ -24,27 +24,18 @@ public class Closet2 : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D col)
     {
 
-        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Closet2").GetComponent<SpriteRenderer>().sprite == OpenedCloset)
+        if (GameObject.Find("Closet2").GetComponent<SpriteRenderer>().sprite == OpenedCloset)
         {
             GameObject.Find("Closet2").GetComponent<SpriteRenderer>().sprite = ClosedCloset;
-            MCspriteRenderer.color = new Color(1f, 1f, 1f, 0f);
-        }
-        else if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Closet2").GetComponent<SpriteRenderer>().sprite == ClosedCloset)
-        {
-            GameObject.Find("Closet2").GetComponent<SpriteRenderer>().sprite = OpenedCloset;
             MCspriteRenderer.color = new Color(1f, 1f, 1f, 1f);
         }
+
     }
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Closet2").GetComponent<SpriteRenderer>().sprite == OpenedCloset)
+        if (GameObject.Find("Closet2").GetComponent<SpriteRenderer>().sprite == OpenedCloset)
         {
             GameObject.Find("Closet2").GetComponent<SpriteRenderer>().sprite = ClosedCloset;
-            MCspriteRenderer.color = new Color(1f, 1f, 1f, 0f);
-        }
-        else if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Closet2").GetComponent<SpriteRenderer>().sprite == ClosedCloset)
-        {
-            GameObject.Find("Closet2").GetComponent<SpriteRenderer>().sprite = OpenedCloset;
             MCspriteRenderer.color = new Color(1f, 1f, 1f, 1f);
         }
     }
