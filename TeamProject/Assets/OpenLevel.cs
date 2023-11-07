@@ -35,4 +35,8 @@ public class OpenLevel : MonoBehaviour
     {
         SceneManager.LoadScene(3);
     }
+    public void Level_4()
+    {
+        SceneManager.LoadScene(4);
+    }
 }
