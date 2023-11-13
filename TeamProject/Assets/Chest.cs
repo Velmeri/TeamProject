@@ -37,9 +37,10 @@ public class Chest : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (GameObject.Find("Chest").GetComponent<SpriteRenderer>().sprite == ClosedChest && GameObject.Find("Closet2").GetComponent<SpriteRenderer>().sprite == KeyNotFound)
+        if (GameObject.Find("Chest").GetComponent<SpriteRenderer>().sprite == ClosedChest && GameObject.Find("Closet2").GetComponent<SpriteRenderer>().sprite == KeyFound)
         {
             GameObject.Find("Chest").GetComponent<SpriteRenderer>().sprite = OpenedChest;
+            GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite = OpenedDoor;
         }
     }
     private void OnTriggerExit2D(Collider2D col)
