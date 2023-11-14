@@ -5,7 +5,8 @@ using UnityEngine;
 public class PauseScript : MonoBehaviour
 {
     public GameObject pauseMenuUI;
-    
+    public GameObject InventoryUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,17 @@ public class PauseScript : MonoBehaviour
             else
             {
                 Pause();
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Q) && (!pauseMenuUI.activeSelf))
+        {
+            if (InventoryUI.activeSelf)
+            {
+                InventoryUI.SetActive(false);
+            }
+            else
+            {
+                InventoryUI.SetActive(true);
             }
         }
     }
