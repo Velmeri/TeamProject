@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Door4Level : MonoBehaviour
 {
@@ -19,6 +20,25 @@ public class Door4Level : MonoBehaviour
         {
             GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite = DoorOpen;
         }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite == DoorOpen)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite == DoorOpen)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D col)
+    {
 
     }
 }
