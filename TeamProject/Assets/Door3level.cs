@@ -9,6 +9,10 @@ public class Door3level : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
     public Sprite OpenDoor;
+    public Sprite CloseDoor;
+    public Sprite PressedButton;
+    public Sprite DefaultButton;
+    bool CollisionHappening = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,25 +23,31 @@ public class Door3level : MonoBehaviour
     void Update()
     {
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        if(GameObject.Find("Button").GetComponent<SpriteRenderer>().sprite == PressedButton )
+        {
+            GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite = OpenDoor;
+        }
+        else
+        {
+            GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite = CloseDoor;
+        }
+        if (CollisionHappening&&Input.GetKeyDown(KeyCode.E) && GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite == OpenDoor)
+        {
+            SceneManager.LoadScene(4);
+        }
 
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite == OpenDoor)
-        {
-            SceneManager.LoadScene(4);
-        }
+        CollisionHappening = true;
     }
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite == OpenDoor)
-        {
-            SceneManager.LoadScene(4);
-        }
+        CollisionHappening = true;
     }
     private void OnTriggerExit2D(Collider2D col)
     {
-
+        CollisionHappening = false;
     }
 }
