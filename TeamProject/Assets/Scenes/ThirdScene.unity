@@ -3524,10 +3524,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 970776232}
   OpenDoor: {fileID: 21300000, guid: 8465e61094172fa40b129c1cb434a3d2, type: 3}
-  CloseDoor: {fileID: 21300000, guid: 10f62c848d848da40b99842a314f9b0c, type: 3}
-  CollisionHappening: 0
-  DefaultButton: {fileID: 21300000, guid: 653b25bf57e2b894481e450ceb8bbd1d, type: 3}
-  PressedButton: {fileID: 21300000, guid: 246b614aa0fa52a4bb765d54f6335a6b, type: 3}
 --- !u!1 &1042804332
 GameObject:
   m_ObjectHideFlags: 0
