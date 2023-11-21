@@ -1772,7 +1772,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.011121452, y: -0.0772748}
+  m_Offset: {x: 0.011121452, y: -0.0979847}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1783,7 +1783,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2248205, y: 1.1945496}
+  m_Size: {x: 1.201855, y: 1.3430879}
   m_EdgeRadius: 0
 --- !u!114 &970776235
 MonoBehaviour:
@@ -1799,6 +1799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 970776232}
   OpenDoor: {fileID: 21300000, guid: a38e95afcf9a1684cb3f486749622f65, type: 3}
+  animator: {fileID: 1994468329}
 --- !u!1 &1092790903
 GameObject:
   m_ObjectHideFlags: 0
