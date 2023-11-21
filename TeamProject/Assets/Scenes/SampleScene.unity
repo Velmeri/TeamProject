@@ -1173,6 +1173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ad42dc61d5090143a6e912c5ca97f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1994468329}
   spriteRenderer: {fileID: 970776232}
   OpenDoor: {fileID: 21300000, guid: 8465e61094172fa40b129c1cb434a3d2, type: 3}
 --- !u!61 &970776234
