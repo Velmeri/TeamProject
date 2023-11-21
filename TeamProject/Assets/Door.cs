@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-
+    bool CollisionHappening = false;
     public SpriteRenderer spriteRenderer;
     public Sprite OpenDoor;
     // Start is called before the first frame update
@@ -18,22 +18,20 @@ public class Door : MonoBehaviour
     void Update()
     {
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
+        if(CollisionHappening==true&&Input.GetKeyDown(KeyCode.E) && GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite == OpenDoor)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
 
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if(Input.GetKeyDown(KeyCode.E) && GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite == OpenDoor)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        CollisionHappening = true;
     }
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite == OpenDoor)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        CollisionHappening = true;
     }
     private void OnTriggerExit2D(Collider2D col)
     {
