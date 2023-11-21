@@ -3003,7 +3003,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -3389,7 +3389,6 @@ GameObject:
   - component: {fileID: 670767603}
   - component: {fileID: 670767606}
   - component: {fileID: 670767605}
-  - component: {fileID: 670767604}
   - component: {fileID: 670767607}
   m_Layer: 0
   m_Name: Closet5
@@ -3413,23 +3412,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1727662257}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &670767604
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670767602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 48d4212c25385174987e1f1f7845d72f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainCharacter: {fileID: 1994468323}
-  spriteRenderer: {fileID: 670767606}
-  MCspriteRenderer: {fileID: 1412060491}
-  OpenedCloset: {fileID: 21300000, guid: 8672ab3a5a85289439cccc8e2b21d1c8, type: 3}
-  ClosedCloset: {fileID: 21300000, guid: 594c876319ba6524d95f1be62bfff1aa, type: 3}
 --- !u!61 &670767605
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3548,6 +3530,7 @@ MonoBehaviour:
   wall2c: {fileID: 784852021}
   wall3c: {fileID: 506744090}
   wall4c: {fileID: 179605187}
+  CollisionHappening: 0
 --- !u!1 &739376433
 GameObject:
   m_ObjectHideFlags: 0
@@ -4354,6 +4337,7 @@ MonoBehaviour:
   wall1c: {fileID: 90136535}
   wall2c: {fileID: 1925142235}
   wall3c: {fileID: 1227504591}
+  CollisionHappening: 0
 --- !u!1 &833253180
 GameObject:
   m_ObjectHideFlags: 0
@@ -5610,6 +5594,7 @@ MonoBehaviour:
   wall1c: {fileID: 1210206512}
   wall2c: {fileID: 1507186781}
   wall3c: {fileID: 2008646381}
+  CollisionHappening: 0
 --- !u!1 &1033247857
 GameObject:
   m_ObjectHideFlags: 0

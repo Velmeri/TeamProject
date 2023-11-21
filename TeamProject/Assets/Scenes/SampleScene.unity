@@ -1275,7 +1275,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.25178835}
+  m_Offset: {x: 0, y: -0.34612206}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1286,7 +1286,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.34, y: 0.94357675}
+  m_Size: {x: 0.34, y: 1.1322443}
   m_EdgeRadius: 0
 --- !u!114 &944121151
 MonoBehaviour:
@@ -1300,6 +1300,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfce6be522c1c1c4085cfd0824c31733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SwitchFalse: {fileID: 21300000, guid: 424bc66105eb8594297a98195b80c182, type: 3}
+  SwitchTrue: {fileID: 21300000, guid: 8fb65c5092ef6d64087ea87092cfa9c4, type: 3}
 --- !u!212 &944121152
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1536,6 +1538,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 970776232}
   OpenDoor: {fileID: 21300000, guid: 8465e61094172fa40b129c1cb434a3d2, type: 3}
+  CloseDoor: {fileID: 21300000, guid: 10f62c848d848da40b99842a314f9b0c, type: 3}
+  CollisionHappening: 0
+  DefaultButton: {fileID: 21300000, guid: 653b25bf57e2b894481e450ceb8bbd1d, type: 3}
+  PressedButton: {fileID: 21300000, guid: 246b614aa0fa52a4bb765d54f6335a6b, type: 3}
 --- !u!61 &970776234
 BoxCollider2D:
   m_ObjectHideFlags: 0
