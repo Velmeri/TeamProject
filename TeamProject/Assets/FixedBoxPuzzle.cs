@@ -50,6 +50,23 @@ public class FixedBoxPuzzle : MonoBehaviour
                 {
                     Gates.SetActive(false);
                 }
+                else
+                {
+                    if(CheckBoxNumber() == 6)
+                    {
+                        FixedBox.tag = "Untagged";
+                        FixedBox2GO.tag = "Untagged";
+                        FixedBox3GO.tag = "Untagged";
+                        FixedBox4GO.tag = "Untagged";
+                        FixedBox6GO.tag = "Untagged";
+                        spriteRenderer.sprite = BoxFalse;
+                        FixedBox2.sprite = BoxFalse;
+                        FixedBox3.sprite = BoxFalse;
+                        FixedBox4.sprite = BoxFalse;
+                        FixedBox5.sprite = BoxFalse;
+                        FixedBox6.sprite = BoxFalse;
+                    }
+                }
             }
         }
     }

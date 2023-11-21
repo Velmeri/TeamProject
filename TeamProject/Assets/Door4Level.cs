@@ -7,6 +7,7 @@ public class Door4Level : MonoBehaviour
 {
     public Sprite DoorOpen;
     public Sprite ChestOpened;
+    bool CollisionHappening=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,25 +21,23 @@ public class Door4Level : MonoBehaviour
         {
             GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite = DoorOpen;
         }
-
+        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite == DoorOpen&&CollisionHappening==true)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite == DoorOpen)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        CollisionHappening = true;
     }
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Door").GetComponent<SpriteRenderer>().sprite == DoorOpen)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        CollisionHappening = true;
     }
     private void OnTriggerExit2D(Collider2D col)
     {
+        CollisionHappening = false;
 
     }
 }
