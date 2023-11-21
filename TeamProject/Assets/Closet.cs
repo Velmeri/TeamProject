@@ -16,7 +16,8 @@ public class Closet : MonoBehaviour
     public SpriteRenderer MCspriteRenderer;
     public Sprite OpenedCloset;
     public Sprite ClosedCloset;
-    
+    bool CollisionHappening = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +27,7 @@ public class Closet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    private void OnTriggerEnter2D(Collider2D col)
-    {
-        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Closet").GetComponent<SpriteRenderer>().sprite == OpenedCloset)
+        if (CollisionHappening==true&&Input.GetKeyDown(KeyCode.E) && GameObject.Find("Closet").GetComponent<SpriteRenderer>().sprite == OpenedCloset)
         {
             GameObject.Find("Closet").GetComponent<SpriteRenderer>().sprite = ClosedCloset;
             MCspriteRenderer.color = new Color(1f, 1f, 1f, 0f);
@@ -38,7 +35,7 @@ public class Closet : MonoBehaviour
             wall2c.isTrigger = false;
             wall3c.isTrigger = false;
         }
-        else if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Closet").GetComponent<SpriteRenderer>().sprite == ClosedCloset)
+        else if (CollisionHappening == true && Input.GetKeyDown(KeyCode.E) && GameObject.Find("Closet").GetComponent<SpriteRenderer>().sprite == ClosedCloset)
         {
             GameObject.Find("Closet").GetComponent<SpriteRenderer>().sprite = OpenedCloset;
             MCspriteRenderer.color = new Color(1f, 1f, 1f, 1f);
@@ -46,29 +43,18 @@ public class Closet : MonoBehaviour
             wall2c.isTrigger = true;
             wall3c.isTrigger = true;
         }
+    }
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        CollisionHappening = true;
 
     }
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Closet").GetComponent<SpriteRenderer>().sprite == OpenedCloset)
-        {
-            GameObject.Find("Closet").GetComponent<SpriteRenderer>().sprite = ClosedCloset;
-            MCspriteRenderer.color = new Color(1f, 1f, 1f, 0f);
-            wall1c.isTrigger = false;
-            wall2c.isTrigger = false;
-            wall3c.isTrigger = false;
-        }
-        else if (Input.GetKeyDown(KeyCode.E) && GameObject.Find("Closet").GetComponent<SpriteRenderer>().sprite == ClosedCloset)
-        {
-            GameObject.Find("Closet").GetComponent<SpriteRenderer>().sprite = OpenedCloset;
-            MCspriteRenderer.color = new Color(1f, 1f, 1f, 1f);
-            wall1c.isTrigger = true;
-            wall2c.isTrigger = true;
-            wall3c.isTrigger = true;
-        }
+        CollisionHappening = true;
     }
     private void OnTriggerExit2D(Collider2D col)
     {
-
+        CollisionHappening = false;
     }
 }
