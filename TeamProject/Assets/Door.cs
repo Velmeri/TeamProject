@@ -8,6 +8,7 @@ public class Door : MonoBehaviour
     public Animator animator;
     float framesPerSecond = 30.0f;
     bool CollisionHappening = false;
+
     public SpriteRenderer spriteRenderer;
     public Sprite OpenDoor;
     // Start is called before the first frame update

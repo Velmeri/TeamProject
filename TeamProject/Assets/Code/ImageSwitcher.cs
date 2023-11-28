@@ -9,7 +9,6 @@ public class ImageSwitcher : MonoBehaviour
     public Sprite[] images;
     public Image imageCanvas;
     public float switchInterval = 0.8f;
-    public string nextSceneName;
 
     private int currentIndex = 0;
     private float timer = 0f;
