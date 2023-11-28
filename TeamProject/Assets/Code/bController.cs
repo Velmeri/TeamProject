@@ -35,10 +35,10 @@ public class bController : MonoBehaviour
         foreach (UnityEngine.UI.Button button in buttons)
         {
             if (countOfUnlockedButtons-- >= 0) {
-                Debug.Log("Button" + bNum++ + " is interactable");
+                //Debug.Log("Button" + bNum++ + " is interactable");
                 button.interactable = true;
             } else {
-                Debug.Log("Button" + bNum++ + " is noneinteractable");
+                //Debug.Log("Button" + bNum++ + " is noneinteractable");
                 button.interactable = false;
             }
         }
