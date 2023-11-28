@@ -50,12 +50,14 @@ public class Door : MonoBehaviour
     }
 
     private void lvlFinished(){
-        int lvlNum = SceneManager.GetActiveScene().buildIndex / 2;
+        int lvlNum = SceneManager.GetActiveScene().buildIndex;
         int completedLevelsNum = PlayerPrefs.GetInt("CompletedLevels", 0);
         if(completedLevelsNum < lvlNum){
             PlayerPrefs.SetInt("CompletedLevels", lvlNum);
         }
         Debug.Log("CompletedLevels: " + PlayerPrefs.GetInt("CompletedLevels" ,0));
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneTransition.SwitchToScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

@@ -992,12 +992,12 @@ GameObject:
   - component: {fileID: 855086201}
   - component: {fileID: 855086200}
   m_Layer: 5
-  m_Name: Canvas (2)
+  m_Name: Canvas (inventory)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &855086200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1206,7 +1206,7 @@ Transform:
   m_GameObject: {fileID: 970776230}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.412, y: 1.25, z: 0}
+  m_LocalPosition: {x: 3.3, y: 0.92, z: 0}
   m_LocalScale: {x: 0.97388226, y: 0.9811324, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1253,7 +1253,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: a38e95afcf9a1684cb3f486749622f65, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1a1eb43231eee364bb4db74a22f43614, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1300,7 +1300,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.82, y: 1.04}
+    oldSize: {x: 1.57, y: 2.46}
     newSize: {x: 0.82, y: 1.04}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1323,7 +1323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1994468329}
   spriteRenderer: {fileID: 970776232}
-  OpenDoor: {fileID: 21300000, guid: a38e95afcf9a1684cb3f486749622f65, type: 3}
+  OpenDoor: {fileID: 21300000, guid: 1a1eb43231eee364bb4db74a22f43614, type: 3}
 --- !u!1 &1097360322
 GameObject:
   m_ObjectHideFlags: 0
@@ -3615,12 +3615,12 @@ GameObject:
   - component: {fileID: 1716607928}
   - component: {fileID: 1716607932}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Canvas(pause)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1716607928
 MonoBehaviour:
   m_ObjectHideFlags: 0
