@@ -17,7 +17,7 @@ public class NewBehaviourScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        Speed = 2;
+        Speed = 3;
     }
 
     // Update is called once per frame

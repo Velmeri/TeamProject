@@ -7,6 +7,7 @@ public class Portal : MonoBehaviour
     public GameObject MainCharacter;
     public float xPos;
     public float yPos;
+    public bool CollisionHappening = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,12 @@ public class Portal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(CollisionHappening==true && Input.GetKeyDown(KeyCode.E)){
+            Vector3 newPos = new Vector3(xPos, yPos, 0);
+
+            MainCharacter.transform.position = newPos;
+            MainCharacter.transform.position = newPos;
+        }
         
     }
     private void OnTriggerEnter2D(Collider2D col)
@@ -23,22 +30,17 @@ public class Portal : MonoBehaviour
         //float xPos = -6.97f;
         //float yPos = 5.21f;
 
-        Vector3 newPos = new Vector3(xPos, yPos, 0);
-
-        MainCharacter.transform.position = newPos;
-        MainCharacter.transform.position = newPos;
+        CollisionHappening = true;
     }
     private void OnTriggerStay2D(Collider2D col)
     {
         //float xPos = -6.97f;
         //float yPos = 5.21f;
 
-        Vector3 newPos = new Vector3(xPos, yPos, 0);
-
-        MainCharacter.transform.position = newPos;
-        MainCharacter.transform.position = newPos;
+        CollisionHappening = true;
     }
     private void OnTriggerExit2D(Collider2D col)
     {
+        CollisionHappening = false;
     }
 }
