@@ -9,18 +9,18 @@ public class OpenLevel : MonoBehaviour
 {
     public void Level_1()
     {
-        SceneManager.LoadScene(1);
+        SceneTransition.SwitchToScene(1);
     }
     public void Level_2()
     {
-        SceneManager.LoadScene(3);
+        SceneTransition.SwitchToScene(2);
     }
     public void Level_3()
     {
-        SceneManager.LoadScene(5);
+        SceneTransition.SwitchToScene(3);
     }
     public void Level_4()
     {
-        SceneManager.LoadScene(7);
+        SceneTransition.SwitchToScene(4);
     }
 }

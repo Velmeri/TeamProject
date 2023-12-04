@@ -57,7 +57,7 @@ public class Door : MonoBehaviour
         }
         Debug.Log("CompletedLevels: " + PlayerPrefs.GetInt("CompletedLevels" ,0));
         
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        //SceneTransition.SwitchToScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneTransition.SwitchToScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
