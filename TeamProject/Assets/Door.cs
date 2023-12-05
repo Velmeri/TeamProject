@@ -31,6 +31,7 @@ public class Door : MonoBehaviour
             int currentFrame = Mathf.RoundToInt(stateInfo.normalizedTime * totalFrames);
             if (currentFrame == totalFrames - 1)
             {
+                animator.SetBool("Victory", false);
                 lvlFinished();
             }
         }
