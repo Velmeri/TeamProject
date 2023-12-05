@@ -5,19 +5,21 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     // I don't have much time so comments will come later :)
-    public float Speed;
+    public float Speed = 2;
+    public float fastSpeed = 4;
+    public float realSpeed;
     private Vector2 Direction;
     private Rigidbody2D rb;
     public Animator animator;
     bool isPushing;
-
+    
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        Speed = 3;
+        realSpeed = Speed;
     }
 
     // Update is called once per frame
@@ -30,11 +32,19 @@ public class NewBehaviourScript : MonoBehaviour
         animator.SetFloat("Horizontal", Direction.x);
         animator.SetFloat("Vertical", Direction.y);
         animator.SetFloat("Speed", Direction.sqrMagnitude);
+        if(Input.GetKey(KeyCode.LeftShift))
+        {
+            realSpeed = fastSpeed;
+        }
+        else
+        {
+            realSpeed = Speed;
+        }
     }
 
     // Called a fixed number of times per second.
     void FixedUpdate(){
-        rb.MovePosition(rb.position + Direction * Speed * Time.fixedDeltaTime);
+        rb.MovePosition(rb.position + Direction * realSpeed * Time.fixedDeltaTime);
     }
 
 
