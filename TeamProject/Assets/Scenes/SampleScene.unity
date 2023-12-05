@@ -255,6 +255,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8516441426128065905, guid: 122b466bbb7c9eb42ae490afd839a68b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8848746496447025599, guid: 122b466bbb7c9eb42ae490afd839a68b, type: 3}
       propertyPath: m_SizeDelta.x
       value: 1550
@@ -1317,7 +1321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062fe856b0705da44ac59990d503e6b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
+  pauseMenuUI: {fileID: 58227262}
 --- !u!4 &1359310306
 Transform:
   m_ObjectHideFlags: 0
@@ -1615,7 +1619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39c1a67520cad748abdc8c3a358d535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pauseMenuUI: {fileID: 0}
+  pauseMenuUI: {fileID: 58227262}
   InventoryUI: {fileID: 2009921270}
 --- !u!114 &1860183641
 MonoBehaviour:
