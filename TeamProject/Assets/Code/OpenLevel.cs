@@ -23,4 +23,8 @@ public class OpenLevel : MonoBehaviour
     {
         SceneTransition.SwitchToScene(5);
     }
+    public void Level_5()
+    {
+        SceneTransition.SwitchToScene(6);
+    }
 }
