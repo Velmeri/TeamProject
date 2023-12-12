@@ -16,6 +16,8 @@ TagManager:
   - FB5
   - FB6
   - GarbageBin
+  - NotSeen
+  - Seen
   layers:
   - Default
   - TransparentFX
