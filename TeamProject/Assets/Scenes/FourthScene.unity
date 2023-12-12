@@ -2513,22 +2513,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6823023990861398171, guid: 122b466bbb7c9eb42ae490afd839a68b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6823023990861398171, guid: 122b466bbb7c9eb42ae490afd839a68b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 31600300}
-    - target: {fileID: 6823023990861398171, guid: 122b466bbb7c9eb42ae490afd839a68b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
-      objectReference: {fileID: 0}
-    - target: {fileID: 6823023990861398171, guid: 122b466bbb7c9eb42ae490afd839a68b, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 7497184663732615058, guid: 122b466bbb7c9eb42ae490afd839a68b, type: 3}
       propertyPath: m_SizeDelta.y
       value: 300
