@@ -1,8 +1,9 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Chest : MonoBehaviour
+public class Chest : MonoBehaviour, ILockable
 {
     public GameObject Chest_;
     public GameObject MainCharacter;
@@ -18,27 +19,25 @@ public class Chest : MonoBehaviour
     public bool CollisionHappening = false;
     public float xPos;
     public float yPos;
-    // Start is called before the first frame update
-    void Start()
+    private NewBehaviourScript script;
+	// Start is called before the first frame update
+	void Start()
     {
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
-    }
+		script = MainCharacter.GetComponent<NewBehaviourScript>();
+	}
 
     // Update is called once per frame
     void Update()
     {
-        if(CollisionHappening==true && Input.GetKeyDown(KeyCode.E))
-        {
-            GameObject.Find("Chest").GetComponent<SpriteRenderer>().sprite = OpenedChest;
-            xPos=-10.97f;
-            yPos = -8.42f;
-
-            Vector3 newPos = new Vector3(xPos, yPos, 0);
-
-            MainCharacter.transform.position = newPos;
-            MainCharacter.transform.position = newPos;
-        }
-    }
+		if (CollisionHappening && Input.GetKeyDown(KeyCode.E)) {
+			if (PlayerHasKey()) {
+				Unlock();
+			} else {
+				Debug.Log("The chest is locked. You need the key to open it.");
+			}
+		}
+	}
     private void OnTriggerEnter2D(Collider2D col)
     {
         CollisionHappening = true;
@@ -63,4 +62,22 @@ public class Chest : MonoBehaviour
     {
         CollisionHappening = false;
     }
+
+	public void Unlock()
+	{
+		Debug.Log("Chest is now unlocked!");
+
+		MainCharacter.transform.position = new Vector3(-10.97f, -8.42f, 0);
+	}
+
+	private bool PlayerHasKey()
+	{
+        foreach (Item item in script.playerInventory.Items) {
+			if(item is Key) {
+                Key key = (Key)item;
+                if(key.LockableTarget == gameObject) return true;
+            }
+		}
+        return false;
+	}
 }

@@ -16,6 +16,8 @@ TagManager:
   - FB5
   - FB6
   - GarbageBin
+  - Item
+  - Inventory
   layers:
   - Default
   - TransparentFX

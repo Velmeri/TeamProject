@@ -1,7 +1,9 @@
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[SerializableAttribute]
 public class NewBehaviourScript : MonoBehaviour
 {
     // I don't have much time so comments will come later :)
@@ -11,7 +13,8 @@ public class NewBehaviourScript : MonoBehaviour
     private Vector2 Direction;
     private Rigidbody2D rb;
     public Animator animator;
-    bool isPushing;
+	public Inventory playerInventory;
+	bool isPushing;
     
     // Start is called before the first frame update
     void Start()
@@ -19,7 +22,12 @@ public class NewBehaviourScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
-        realSpeed = Speed;
+		GameObject inventoryObject = GameObject.FindGameObjectWithTag("Inventory");
+		if (inventoryObject != null) {
+			playerInventory = inventoryObject.GetComponent<Inventory>();
+		}
+
+		realSpeed = Speed;
     }
 
     // Update is called once per frame
@@ -81,5 +89,17 @@ public class NewBehaviourScript : MonoBehaviour
             isPushing = false;
             animator.SetBool("IsPushing", false);
         }
-    }
+		if (other.gameObject.CompareTag("Item"))
+		{
+			PickUp(other.gameObject);
+		}
+	}
+
+	private void PickUp(GameObject item)
+	{
+        Item newItem = item.GetComponent<Item>();
+        playerInventory.Add(newItem);
+
+		Destroy(item);
+	}
 }
