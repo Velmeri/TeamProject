@@ -18,6 +18,8 @@ TagManager:
   - GarbageBin
   - Item
   - Inventory
+  - NotSeen
+  - Seen
   layers:
   - Default
   - TransparentFX
