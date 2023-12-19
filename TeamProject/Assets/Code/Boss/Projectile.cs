@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,4 +14,8 @@ public class Projectile : MonoBehaviour
 		transform.Translate(direction.normalized * speed * Time.deltaTime);
 	}
 
+	private void OnBecameInvisible()
+	{
+		Destroy(gameObject);
+	}
 }
