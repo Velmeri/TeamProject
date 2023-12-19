@@ -82,17 +82,17 @@ public class NewBehaviourScript : MonoBehaviour
             isPushing = true;
             animator.SetBool("IsPushing", true);
         }
-    }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        Debug.Log("OnTriggerExit2D");
+		if (other.CompareTag("Projectile")) {
+            Destroy(gameObject);
+		}
 
         if (other.CompareTag("Box"))
         {
             isPushing = false;
             animator.SetBool("IsPushing", false);
         }
+
 		if (other.gameObject.CompareTag("Item"))
 		{
 			PickUp(other.gameObject);

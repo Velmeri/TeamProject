@@ -20,6 +20,7 @@ TagManager:
   - Inventory
   - NotSeen
   - Seen
+  - Projectile
   layers:
   - Default
   - TransparentFX
