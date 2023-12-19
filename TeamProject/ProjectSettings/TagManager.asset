@@ -20,6 +20,7 @@ TagManager:
   - Inventory
   - NotSeen
   - Seen
+<<<<<<< HEAD
   - BGMusicText
   - BGMusicSlider
   - BGSoundsSlider
@@ -28,6 +29,9 @@ TagManager:
   - BGMusic
   - BGSounds
   - BGSoundCreated
+=======
+  - Projectile
+>>>>>>> 9680fdb05a1af7210b5dcd65d49a13bbe7bf187f
   layers:
   - Default
   - TransparentFX
