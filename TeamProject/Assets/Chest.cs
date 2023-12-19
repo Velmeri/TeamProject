@@ -19,12 +19,12 @@ public class Chest : MonoBehaviour, ILockable
     public bool CollisionHappening = false;
     public float xPos;
     public float yPos;
-    private NewBehaviourScript script;
+    private PlayerController script;
 	// Start is called before the first frame update
 	void Start()
     {
         spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
-		script = MainCharacter.GetComponent<NewBehaviourScript>();
+		script = MainCharacter.GetComponent<PlayerController>();
 	}
 
     // Update is called once per frame

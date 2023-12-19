@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [SerializableAttribute]
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     // I don't have much time so comments will come later :)
     public float Speed = 2;
