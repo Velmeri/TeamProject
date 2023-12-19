@@ -7148,6 +7148,7 @@ MonoBehaviour:
   realSpeed: 0
   animator: {fileID: 1994468329}
   playerInventory: {fileID: 427439920}
+  haveSphere: 0
 --- !u!70 &1994468331
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
