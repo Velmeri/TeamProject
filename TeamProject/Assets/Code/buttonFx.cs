@@ -4,16 +4,24 @@ using UnityEngine;
 
 public class buttonFx : MonoBehaviour
 {
-    public AudioSource myFx;
-    public AudioClip hoverFx;
-    public AudioClip clickFx;
+    //public AudioSource myFx;
+    //public AudioClip clickFx;
 
-    public void HoverSound()
+    //public void HoverSound()
+    //{
+    //    myFx.PlayOneShot(clickFx);
+    //}
+    //public void ClickSound()
+    //{
+    //    myFx.PlayOneShot(clickFx);
+    //}
+
+    public AudioSource Sound;
+
+
+    public void PlaySound()
     {
-        myFx.PlayOneShot(hoverFx);
+        Sound.Play();
     }
-    public void ClickSound()
-    {
-        myFx.PlayOneShot(clickFx);
-    }
+
 }
