@@ -67,6 +67,7 @@ public class Chest : MonoBehaviour, ILockable
 	{
 		Debug.Log("Chest is now unlocked!");
 
+        script.haveSphere = true;
 		MainCharacter.transform.position = new Vector3(-10.97f, -8.42f, 0);
 	}
 

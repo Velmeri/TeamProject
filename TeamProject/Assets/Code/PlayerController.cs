@@ -15,9 +15,10 @@ public class NewBehaviourScript : MonoBehaviour
     public Animator animator;
 	public Inventory playerInventory;
 	bool isPushing;
-    
-    // Start is called before the first frame update
-    void Start()
+    public bool haveSphere;
+
+	// Start is called before the first frame update
+	void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -48,6 +49,9 @@ public class NewBehaviourScript : MonoBehaviour
         {
             realSpeed = Speed;
         }
+        if(Input.GetKeyDown(KeyCode.F) && haveSphere == true) {
+			animator.SetBool("isSphere", !animator.GetBool("isSphere"));
+		}
     }
 
     // Called a fixed number of times per second.
@@ -78,17 +82,17 @@ public class NewBehaviourScript : MonoBehaviour
             isPushing = true;
             animator.SetBool("IsPushing", true);
         }
-    }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        Debug.Log("OnTriggerExit2D");
+		if (other.CompareTag("Projectile")) {
+            Destroy(gameObject);
+		}
 
         if (other.CompareTag("Box"))
         {
             isPushing = false;
             animator.SetBool("IsPushing", false);
         }
+
 		if (other.gameObject.CompareTag("Item"))
 		{
 			PickUp(other.gameObject);
