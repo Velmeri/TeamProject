@@ -20,6 +20,14 @@ TagManager:
   - Inventory
   - NotSeen
   - Seen
+  - BGMusicText
+  - BGMusicSlider
+  - BGSoundsSlider
+  - BGSoundsText
+  - BGMusicCreated
+  - BGMusic
+  - BGSounds
+  - BGSoundCreated
   layers:
   - Default
   - TransparentFX
